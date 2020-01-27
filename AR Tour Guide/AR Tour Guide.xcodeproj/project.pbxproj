@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		696235F223DE90F900F3574A /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 696235F123DE90F900F3574A /* Sounds */; };
 		696235F523DE914400F3574A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696235F423DE914400F3574A /* AVFoundation.framework */; };
 		696235F723DE978900F3574A /* sample_audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 696235F623DE978900F3574A /* sample_audio1.mp3 */; };
 		6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1923DE7C79002320AB /* AppDelegate.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		696235F123DE90F900F3574A /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = ../../../Sounds; sourceTree = "<group>"; };
 		696235F423DE914400F3574A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		696235F623DE978900F3574A /* sample_audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sample_audio1.mp3; path = ../../../Sounds/sample_audio1.mp3; sourceTree = "<group>"; };
 		6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Tour Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +78,6 @@
 				6ACA3D2423DE7C85002320AB /* LaunchScreen.storyboard */,
 				6ACA3D2723DE7C85002320AB /* Info.plist */,
 				696235F623DE978900F3574A /* sample_audio1.mp3 */,
-				696235F123DE90F900F3574A /* Sounds */,
 			);
 			path = "AR Tour Guide";
 			sourceTree = "<group>";
@@ -146,7 +143,6 @@
 				6ACA3D2623DE7C85002320AB /* LaunchScreen.storyboard in Resources */,
 				696235F723DE978900F3574A /* sample_audio1.mp3 in Resources */,
 				6ACA3D2323DE7C84002320AB /* Assets.xcassets in Resources */,
-				696235F223DE90F900F3574A /* Sounds in Resources */,
 				6ACA3D2123DE7C7A002320AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
