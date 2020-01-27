@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AR Tour Guide.xcodeproj">
+      location = "group:../../../Sounds">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
