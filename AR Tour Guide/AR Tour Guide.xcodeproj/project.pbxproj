@@ -13,6 +13,8 @@
 		6ACA3D2123DE7C7A002320AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1F23DE7C7A002320AB /* Main.storyboard */; };
 		6ACA3D2323DE7C84002320AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D2223DE7C84002320AB /* Assets.xcassets */; };
 		6ACA3D2623DE7C85002320AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D2423DE7C85002320AB /* LaunchScreen.storyboard */; };
+		F37D232823E6778F0074255C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37D232723E6778F0074255C /* Location.swift */; };
+		F37D232A23E67F7D0074255C /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37D232923E67F7D0074255C /* LocationList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6ACA3D2223DE7C84002320AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ACA3D2523DE7C85002320AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ACA3D2723DE7C85002320AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F37D232723E6778F0074255C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../../LocationTest/Location.swift; sourceTree = "<group>"; };
+		F37D232923E67F7D0074255C /* LocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationList.swift; path = ../../../LocationTest/LocationList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				6ACA3D2223DE7C84002320AB /* Assets.xcassets */,
 				6ACA3D2423DE7C85002320AB /* LaunchScreen.storyboard */,
 				6ACA3D2723DE7C85002320AB /* Info.plist */,
+				F37D232723E6778F0074255C /* Location.swift */,
+				F37D232923E67F7D0074255C /* LocationList.swift */,
 			);
 			path = "AR Tour Guide";
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				6ACA3D1C23DE7C79002320AB /* ViewController.swift in Sources */,
 				6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */,
+				F37D232823E6778F0074255C /* Location.swift in Sources */,
 				6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */,
+				F37D232A23E67F7D0074255C /* LocationList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3634BL58F7;
 				INFOPLIST_FILE = "AR Tour Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3634BL58F7;
 				INFOPLIST_FILE = "AR Tour Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
