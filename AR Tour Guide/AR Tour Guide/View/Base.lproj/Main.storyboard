@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfq-EJ-Rac">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="AR_Tour_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IJf-TO-9hT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uU-EZ-as2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-D1-VVl">
+                                <rect key="frame" x="113.66666666666669" y="716" width="148" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Load Bear">
+                                    <color key="titleColor" red="0.52773141860961914" green="0.91153925657272339" blue="0.54712063074111938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showBearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s00-OD-PdX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7uU-EZ-as2" secondAttribute="trailing" id="6ko-zW-lYY"/>
+                            <constraint firstItem="o33-2Z-vwg" firstAttribute="bottom" secondItem="v7I-D1-VVl" secondAttribute="bottom" constant="14" id="7Lb-vd-tIW"/>
+                            <constraint firstItem="v7I-D1-VVl" firstAttribute="centerX" secondItem="IJf-TO-9hT" secondAttribute="centerX" id="DtQ-EC-iYg"/>
+                            <constraint firstItem="7uU-EZ-as2" firstAttribute="top" secondItem="IJf-TO-9hT" secondAttribute="top" id="Nbv-2A-Ix2"/>
+                            <constraint firstAttribute="bottom" secondItem="7uU-EZ-as2" secondAttribute="bottom" id="R2k-UQ-jai"/>
+                            <constraint firstItem="7uU-EZ-as2" firstAttribute="leading" secondItem="o33-2Z-vwg" secondAttribute="leading" id="c4H-Sp-gLc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o33-2Z-vwg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jxM-tf-1VO"/>
+                    <connections>
+                        <outlet property="arView" destination="7uU-EZ-as2" id="mZf-LJ-oVG"/>
+                        <outlet property="buttonView" destination="v7I-D1-VVl" id="g6v-gE-Cer"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.74384236453201"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xEP-vj-O34">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yfq-EJ-Rac" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eLf-H8-EGb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mfr-5q-23h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKh-8M-8Wz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+</document>
