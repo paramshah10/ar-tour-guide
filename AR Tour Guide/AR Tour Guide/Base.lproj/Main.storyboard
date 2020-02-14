@@ -1,18 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yOl-qC-XS7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fOe-fZ-BZi">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Court Of Sciences View Controller-->
+        <scene sceneID="7iJ-Lx-LC8">
+            <objects>
+                <viewController id="ocG-yc-Ejw" customClass="CourtOfSciencesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vbo-Qd-3nr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-he-eAN">
+                                <rect key="frame" x="18" y="8" width="339" height="651"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2RR-he-eAN" firstAttribute="leading" secondItem="K1o-E8-ZvU" secondAttribute="leading" constant="18" id="0mo-DH-2hP"/>
+                            <constraint firstItem="2RR-he-eAN" firstAttribute="top" secondItem="K1o-E8-ZvU" secondAttribute="top" constant="8" id="6rx-QG-2qW"/>
+                            <constraint firstItem="K1o-E8-ZvU" firstAttribute="bottom" secondItem="2RR-he-eAN" secondAttribute="bottom" constant="8" id="MaW-Fk-NFS"/>
+                            <constraint firstItem="K1o-E8-ZvU" firstAttribute="trailing" secondItem="2RR-he-eAN" secondAttribute="trailing" constant="18" id="V5b-XC-vju"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K1o-E8-ZvU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbZ-AF-1o5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3682" y="126"/>
+        </scene>
+        <!--Dickson Court View Controller-->
+        <scene sceneID="ujf-2C-d7E">
+            <objects>
+                <viewController id="eS5-MC-bqW" customClass="DicksonCourtViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5P-pB-C5H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V04-ea-nc6">
+                                <rect key="frame" x="18" y="8" width="339" height="651"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Royce Hall
+
+Royce Hall is one of UCLA’s most culturally rich buildings and a symbol of both intellectual and artistic excellence. Like Carnegie Hall and Lincoln Center, Royce Hall is one of America’s great concert halls, distinguished, not only for its impeccable beauty and refined acoustics, but also for the ghosts of performances that haunt it. Royce Hall has hosted many prominent artists such as Frank Sinatra, Ella Fitzgerald, Leonard Bernstein and the New York Philharmonic, Twyla Tharp, Frank Zappa, Mikhail Baryshnikov, The Philip Glass Ensemble and Meredith Monk to name a few. 
+
+Powell Library
+
+Powell Library offers students opportunities to discover their intellectual passions, explore their creative talents, and engage in community with others. Our services, spaces, collections, and programs promote student learning and success at UCLA and beyond. Services include research and instructional consultations and workshops in the Inquiry Labs, learning and instructional technology support in the CLICC Labs, and writing consultations offered in partnership with the Undergraduate Writing Center. 
+</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V04-ea-nc6" firstAttribute="leading" secondItem="4lN-LM-oNI" secondAttribute="leading" constant="18" id="V0P-VL-kmy"/>
+                            <constraint firstItem="V04-ea-nc6" firstAttribute="top" secondItem="4lN-LM-oNI" secondAttribute="top" constant="8" id="eWB-Ur-s3b"/>
+                            <constraint firstItem="4lN-LM-oNI" firstAttribute="trailing" secondItem="V04-ea-nc6" secondAttribute="trailing" constant="18" id="eiO-XL-HV6"/>
+                            <constraint firstItem="4lN-LM-oNI" firstAttribute="bottom" secondItem="V04-ea-nc6" secondAttribute="bottom" constant="8" id="o1a-vp-zrV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4lN-LM-oNI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHF-ea-ZwP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2899" y="126"/>
+        </scene>
+        <!--Wilson Plaza View Controller-->
+        <scene sceneID="aea-Do-OvF">
+            <objects>
+                <viewController id="8ve-p5-Wcf" customClass="WilsonPlazaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ikx-CX-6cy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="joA-Xo-sdd">
+                                <rect key="frame" x="18" y="8" width="339" height="651"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Wilson Plaza
+
+Student Activities Center
+
+The student activities center is a big umbrella that hosts various departments within. Community Programs Office is UCLA’s cross-cultural center that aims to nurture an inclusive and diverse community by engaging and empowering students to develop and execute student-initiated, student-run outreach, service and retention programs. Student activities center also offers an 8 lane, outdoor swimming pool located at the heart of the campus that allows students to take a break from studying, and relax like no other.  
+
+Intramural Field
+
+The intramural field is one of the many UCLA Recreation facilities. The intramural field is a 10 acres field that accommodates Intramural Sports, Club Sports, Open Recreation, Summer Camps, and various special event activities.
+
+Fowler Museum
+
+The Fowler Museum at UCLA explores global arts and cultures with an emphasis on works from Africa, Asia, the Pacific, and the Americas—past and present. It is named in honor of Francis E. Fowler Jr., inventor and lifelong art collector. "Reflecting Culture," an exhibit of Fowler's silver collection, is on permanent display. The Fowler offers free admission and easy parking to all its visitors. 
+
+</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="joA-Xo-sdd" firstAttribute="leading" secondItem="Z0j-Na-v3O" secondAttribute="leading" constant="18" id="TDu-0f-rdd"/>
+                            <constraint firstItem="Z0j-Na-v3O" firstAttribute="bottom" secondItem="joA-Xo-sdd" secondAttribute="bottom" constant="8" id="aba-Tr-4NY"/>
+                            <constraint firstItem="Z0j-Na-v3O" firstAttribute="trailing" secondItem="joA-Xo-sdd" secondAttribute="trailing" constant="18" id="dfO-7y-WsP"/>
+                            <constraint firstItem="joA-Xo-sdd" firstAttribute="top" secondItem="Z0j-Na-v3O" secondAttribute="top" constant="8" id="rnz-Yq-RIJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z0j-Na-v3O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWX-2N-05y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2152" y="130"/>
+        </scene>
+        <!--Bruin Plaza View Controller-->
+        <scene sceneID="ynW-sU-UfA">
+            <objects>
+                <viewController id="fOe-fZ-BZi" customClass="BruinPlazaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fw5-gy-n3G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zh8-Jm-3rj">
+                                <rect key="frame" x="18" y="8" width="339" height="651"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">The Bruin Bear Statue
+
+The Bruin Bear is the regal landmark statue of UCLA. In 1984, to mark its 50th Anniversary, the UCLA Alumni Association commissioned "Mighty Bruins" and presented the Bruin Bear Statue to the university. Every year during the UCLA-USC rivalry game, the bruin goes into a hibernating state and is protected from USC’s vandalization. 
+
+Ashe Center
+
+The Arthur Ashe Student Health and Wellness Center is devoted to providing quality, accessible, healthcare and education to support the unique development of UCLA students. It is committed to helping students “shine, inside and out.” From eating well and staying active to managing stress, The Ashe Center focuses on student wellbeing by providing ongoing wellness workshops, participating in health-related outreach events on campus.
+
+Wooden Center
+
+The John Wooden Center is a 95,000 square foot recreation center named after legendary basketball coach John Wooden. It is the main building for intramural athletics at UCLA. In addition, it serves as one of the home venues for the UCLA women's volleyball team and also houses the training gym for the UCLA gymnastics team.
+
+UCLA Store
+
+The UCLA store is located just right opposite to the UCLA Athletics Hall of Fame. Visitors can buy anything UCLA and more in the store. It is just like a super store with books, food, computers, electronic supplies, supermarket, cosmetic, and gifts!
+</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zh8-Jm-3rj" firstAttribute="leading" secondItem="haO-hQ-UcZ" secondAttribute="leading" constant="18" id="5rr-fF-h2z"/>
+                            <constraint firstItem="zh8-Jm-3rj" firstAttribute="top" secondItem="haO-hQ-UcZ" secondAttribute="top" constant="8" id="6Dh-8I-uYQ"/>
+                            <constraint firstItem="haO-hQ-UcZ" firstAttribute="bottom" secondItem="zh8-Jm-3rj" secondAttribute="bottom" constant="8" id="FjJ-lm-NkW"/>
+                            <constraint firstItem="haO-hQ-UcZ" firstAttribute="trailing" secondItem="zh8-Jm-3rj" secondAttribute="trailing" constant="18" id="dfj-4e-8Y5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="haO-hQ-UcZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgv-Zg-d1V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1377" y="134"/>
+        </scene>
+        <!--Hill View Controller-->
+        <scene sceneID="5kA-n2-eoA">
+            <objects>
+                <viewController id="ncX-Cq-Wg5" customClass="HillViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cle-Ty-3kO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kv3-V1-OOn">
+                                <rect key="frame" x="18" y="8" width="339" height="651"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Living on the Hill
+
+Welcome to the Hill, the home for many Bruins. To experience university life fully, nothing equals living on campus where students can enjoy convenience and a sense of community. UCLA’s on-campus housing is just a short walk away from classrooms, libraries, and sports facilities. With housing and dining needs met, students can concentrate on their academic success and personal growth.
+
+Dining on the Hill
+
+UCLA dining services are only steps away from residential buildings on the hill. There are 8 dining halls on the hill, catering to the needs of the students and guests with convenience and a wide variety of menu choices. Dining hall themes include Asian cuisine, Mediterrian cuisine, healthy cuisine and much more! In addition, UCLA dining services was ranked as the best college dining in the nation by Niche.
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ShS-GW-VfZ" firstAttribute="trailing" secondItem="kv3-V1-OOn" secondAttribute="trailing" constant="18" id="9Mn-sl-jYS"/>
+                            <constraint firstItem="ShS-GW-VfZ" firstAttribute="bottom" secondItem="kv3-V1-OOn" secondAttribute="bottom" constant="8" id="A35-rG-EYe"/>
+                            <constraint firstItem="kv3-V1-OOn" firstAttribute="top" secondItem="ShS-GW-VfZ" secondAttribute="top" constant="8" id="Nyw-Xi-vtb"/>
+                            <constraint firstItem="kv3-V1-OOn" firstAttribute="leading" secondItem="ShS-GW-VfZ" secondAttribute="leading" constant="18" id="rXE-cC-1qd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ShS-GW-VfZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCB-QC-QyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-632" y="134"/>
+        </scene>
         <!--ARViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" userLabel="ARViewController" customClass="ViewController" customModule="AR_Tour_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arView>
                     <navigationItem key="navigationItem" id="63o-cc-TaG"/>
@@ -29,14 +227,14 @@
             <objects>
                 <viewController id="yOl-qC-XS7" customClass="WelcomeViewController" customModule="AR_Tour_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0p-sY-ESc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomePageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Cop-F8-t4l">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="H15-RM-iL5">
-                                <rect key="frame" x="20" y="145" width="374" height="606.5"/>
+                                <rect key="frame" x="0.5" y="30.5" width="374" height="606.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Tour Guide" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kF-aQ-MQy">
                                         <rect key="frame" x="18" y="0.0" width="338" height="62.5"/>
