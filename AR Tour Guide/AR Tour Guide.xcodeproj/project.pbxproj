@@ -13,6 +13,14 @@
 		6ACA3D2123DE7C7A002320AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1F23DE7C7A002320AB /* Main.storyboard */; };
 		6ACA3D2323DE7C84002320AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D2223DE7C84002320AB /* Assets.xcassets */; };
 		6ACA3D2623DE7C85002320AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D2423DE7C85002320AB /* LaunchScreen.storyboard */; };
+<<<<<<< Updated upstream
+=======
+		A4A7DA7F23EDE95800B1180F /* Bear1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4A7DA7E23EDE95800B1180F /* Bear1.rcproject */; };
+		A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEA23E7D16D00676F82 /* LocationList.swift */; };
+		A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEB23E7D16D00676F82 /* Location.swift */; };
+		A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEE23E7D67700676F82 /* Bear.rcproject */; };
+		CC1C0ECD23F672FF006DB4CF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1C0ECC23F672FF006DB4CF /* InfoViewController.swift */; };
+>>>>>>> Stashed changes
 		CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +33,14 @@
 		6ACA3D2223DE7C84002320AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ACA3D2523DE7C85002320AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ACA3D2723DE7C85002320AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+=======
+		A4A7DA7E23EDE95800B1180F /* Bear1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bear1.rcproject; sourceTree = "<group>"; };
+		A4D8AAEA23E7D16D00676F82 /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
+		A4D8AAEB23E7D16D00676F82 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A4D8AAEE23E7D67700676F82 /* Bear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bear.rcproject; sourceTree = "<group>"; };
+		CC1C0ECC23F672FF006DB4CF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +86,36 @@
 			path = "AR Tour Guide";
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
+=======
+		A49C5E2023EB3607006C4CF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4D8AAEB23E7D16D00676F82 /* Location.swift */,
+				A4D8AAEA23E7D16D00676F82 /* LocationList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A49C5E2123EB3610006C4CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6ACA3D2423DE7C85002320AB /* LaunchScreen.storyboard */,
+				6ACA3D1F23DE7C7A002320AB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A49C5E2223EB361A006C4CF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC1C0ECC23F672FF006DB4CF /* InfoViewController.swift */,
+				6ACA3D1B23DE7C79002320AB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+>>>>>>> Stashed changes
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +190,13 @@
 				6ACA3D1C23DE7C79002320AB /* ViewController.swift in Sources */,
 				CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */,
 				6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */,
+				CC1C0ECD23F672FF006DB4CF /* InfoViewController.swift in Sources */,
+				A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */,
+				A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */,
+>>>>>>> Stashed changes
 				6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
