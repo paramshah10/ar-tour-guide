@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36801FA623FA3C1D00411D95 /* Audio&Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36801FA523FA3C1D00411D95 /* Audio&Text.swift */; };
 		6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1923DE7C79002320AB /* AppDelegate.swift */; };
 		6ACA3D1C23DE7C79002320AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1B23DE7C79002320AB /* ViewController.swift */; };
 		6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1D23DE7C7A002320AB /* Experience.rcproject */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36801FA523FA3C1D00411D95 /* Audio&Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio&Text.swift"; sourceTree = "<group>"; };
 		6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Tour Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACA3D1923DE7C79002320AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ACA3D1B23DE7C79002320AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D8AAEB23E7D16D00676F82 /* Location.swift */,
+				36801FA523FA3C1D00411D95 /* Audio&Text.swift */,
 				A4D8AAEA23E7D16D00676F82 /* LocationList.swift */,
 			);
 			path = Model;
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ACA3D1C23DE7C79002320AB /* ViewController.swift in Sources */,
+				36801FA623FA3C1D00411D95 /* Audio&Text.swift in Sources */,
 				CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */,
 				6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */,
 				A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */,
