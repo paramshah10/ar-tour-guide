@@ -95,6 +95,13 @@ class ViewController: UIViewController {
         buttonView.isHidden = true;
     }
     
+    @IBAction func playAudio(_ sender: Any) {
+        
+        var audio = Audio()
+        
+        audio.playAudio(name: "flame", type: "wav")
+        
+    }
     
 }
 
