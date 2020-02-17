@@ -9,9 +9,13 @@
 import UIKit
 import RealityKit
 import CoreLocation
+import AVFoundation
 
 class ViewController: UIViewController {
     
+    //var audioPlayer = AVAudioPlayer()
+    let audio = Audio()
+
     // IBOutlets
     @IBOutlet weak var arView: ARView!
     @IBOutlet weak var buttonView: UIButton!
@@ -23,7 +27,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let sound = Bundle.main.path(forResource: "temp", ofType: "mp3")
         
+//        let t = audio.playAudio(name: "temp", type: "mp3")
+
+//        if (t != 0)
+//        {
+//            print("cannot play")
+//        }
+//        do
+//        {
+//            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+//            //audioPlayer.prepareToPlay()
+//        }
+//        catch
+//        {
+//            print(error)
+//        }
         buttonView.isHidden = true;
         
         // Location initialization.
@@ -96,11 +116,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playAudio(_ sender: Any) {
-        
-        var audio = Audio()
-        
-        audio.playAudio(name: "flame", type: "wav")
-        
+        audio.playAudio(name: "temp", type: "mp3")
     }
     
 }

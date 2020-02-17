@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36801FA623FA3C1D00411D95 /* Audio&Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36801FA523FA3C1D00411D95 /* Audio&Text.swift */; };
+		69180F6923FA47A100D10D1B /* temp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69180F6823FA47A100D10D1B /* temp.mp3 */; };
 		6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1923DE7C79002320AB /* AppDelegate.swift */; };
 		6ACA3D1C23DE7C79002320AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1B23DE7C79002320AB /* ViewController.swift */; };
 		6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1D23DE7C7A002320AB /* Experience.rcproject */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		36801FA523FA3C1D00411D95 /* Audio&Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio&Text.swift"; sourceTree = "<group>"; };
+		69180F6823FA47A100D10D1B /* temp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = temp.mp3; path = ../../../../../../Downloads/temp.mp3; sourceTree = "<group>"; };
 		6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Tour Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACA3D1923DE7C79002320AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ACA3D1B23DE7C79002320AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69180F6723FA470900D10D1B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				69180F6823FA47A100D10D1B /* temp.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		6ACA3D0D23DE7C79002320AB = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				6ACA3D1B23DE7C79002320AB /* ViewController.swift */,
+				69180F6723FA470900D10D1B /* Sounds */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 				6ACA3D2623DE7C85002320AB /* LaunchScreen.storyboard in Resources */,
 				6ACA3D2323DE7C84002320AB /* Assets.xcassets in Resources */,
 				6ACA3D2123DE7C7A002320AB /* Main.storyboard in Resources */,
+				69180F6923FA47A100D10D1B /* temp.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
