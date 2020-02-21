@@ -10,7 +10,7 @@ import UIKit
 import RealityKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class ARViewController: UIViewController {
     
     // IBOutlets
     @IBOutlet weak var arView: ARView!
@@ -19,12 +19,26 @@ class ViewController: UIViewController {
     // Variables and Constants.
     let locationManager = CLLocationManager()
     var locationList = LocationList()
+    var errorShown = false
     var didRender = false
+    var currentLocation = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // View initialization.
         buttonView.isHidden = true;
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Refresh",
+            style: .plain,
+            target: self,
+            action: #selector(refreshPressed))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Info",
+            style: .plain,
+            target: self,
+            action: #selector(infoButtonPressed))
         
         // Location initialization.
         locationManager.requestAlwaysAuthorization()
@@ -33,7 +47,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self as CLLocationManagerDelegate
         
         // Defining new locations.
-        let newLocation1 = Location(
+        let sproulCourt = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.072377,
                 longitude: -118.450842),
@@ -42,7 +56,7 @@ class ViewController: UIViewController {
                 longitude: -118.450540),
             name: "Sproul Court")
         
-        let newLocation2 = Location(
+        let sproulHall = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.072656,
                 longitude: -118.450640),
@@ -51,7 +65,7 @@ class ViewController: UIViewController {
                 longitude: -118.449758),
             name: "Sproul Hall")
         
-        let newLocation3 = Location(
+        let courtside = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.073864,
                 longitude: -118.450351),
@@ -60,7 +74,7 @@ class ViewController: UIViewController {
                 longitude: -118.449333),
             name: "Courtside")
         
-        let newLocation4 = Location(
+        let mooreHall = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.070777,
                 longitude: -118.443064),
@@ -69,7 +83,7 @@ class ViewController: UIViewController {
                 longitude: -118.442479),
             name: "Moore Hall")
         
-        let newLocation5 = Location(
+        let covelCommons = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.073248,
                 longitude: -118.450548),
@@ -78,21 +92,53 @@ class ViewController: UIViewController {
                 longitude: -118.449628),
             name: "Covel Commons")
         
+        let powellLibrary = Location(
+            coord1: CLLocationCoordinate2D(
+                latitude: 34.072190,
+                longitude: -118.442662),
+            coord2: CLLocationCoordinate2D(
+                latitude: 34.071922,
+                longitude:  -118.441635),
+            name: "Powell Library")
+        
         // Adding new locations.
-        locationList.addLocation(location: newLocation1)
-        locationList.addLocation(location: newLocation2)
-        locationList.addLocation(location: newLocation3)
-        locationList.addLocation(location: newLocation4)
-        locationList.addLocation(location: newLocation5)
+//        locationList.addLocation(location: sproulCourt)
+//        locationList.addLocation(location: sproulHall)
+//        locationList.addLocation(location: courtside)
+//        locationList.addLocation(location: mooreHall)
+        locationList.addLocation(location: covelCommons)
+//        locationList.addLocation(location: powellLibrary)
         
     }
     
+    @objc func refreshPressed() {
+        
+        errorShown = false
+        didRender = false
+        arView.scene.anchors.removeAll()
+        
+    }
+    
+    @objc func infoButtonPressed() {
+        self.performSegue(withIdentifier: "arToInfoPage", sender: self)
+    }
+    
     @IBAction func showBearButton(_ sender: UIButton) {
-        // Load the "Box" scene from the "Experience" Reality File.
-        let bearAnchor = try! Bear1.loadScene()
+        // Load the scene from the Reality File.
+        let bearAnchor = try! Bear.loadScene()
         // Add the box anchor to the scene.
         arView.scene.anchors.append(bearAnchor)
         buttonView.isHidden = true;
+        didRender = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "arToInfoPage" {
+            let destinationVC = segue.destination as! InfoPageViewController
+            destinationVC.location = self.currentLocation
+        }
+        
     }
     
     
@@ -100,41 +146,49 @@ class ViewController: UIViewController {
 
 // MARK: - ViewController extensions.
 
-extension ViewController: CLLocationManagerDelegate {
-
+extension ARViewController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let lastLocation = locations.last
         
-        // If not already rendered.
-        if !didRender {
+        currentLocation = locationList.isInAnyLocation(user: lastLocation!.coordinate)
+        navigationController?.title = currentLocation
+        
+        switch currentLocation {
             
-            let currentLocation = locationList.isInAnyLocation(user: lastLocation!.coordinate)
-            navigationController?.title = currentLocation
+        case "Sproul Court":
+            fallthrough
             
-            switch currentLocation {
+        case "Sproul Hall":
+            fallthrough
+            
+        case "Courtside":
+            fallthrough
+            
+        case "Covel Commons":
+            fallthrough
+            
+        case "Powell Library":
+            fallthrough
+            
+        case "Moore Hall":
+            errorShown = false
+            if !didRender {
+                navigationItem.title = currentLocation
+                buttonView.isHidden = false
                 
-            case "Sproul Court":
-                fallthrough
-    
-            case "Sproul Hall":
-                fallthrough
-                
-            case "Courtside":
-                fallthrough
-                
-            case "Covel Commons":
-                fallthrough
-                
-            case "Moore Hall":
-                didRender = true;
-                buttonView.isHidden = false;
-                
-            default:
+            }
+            
+        default:
+            if !errorShown {
+                errorShown = true
+                didRender = false
+                navigationItem.title = "Invalid location!"
+                buttonView.isHidden = true
                 let alert = UIAlertController(title: "An error occured!", message: "This is not a valid location!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
                 self.present(alert, animated: true)
-                
             }
             
         }
