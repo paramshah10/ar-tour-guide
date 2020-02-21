@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfq-EJ-Rac">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -19,14 +19,27 @@
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uU-EZ-as2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </arView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-D1-VVl">
-                                <rect key="frame" x="113.66666666666669" y="716" width="148" height="48"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Load Bear">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-D1-VVl">
+                                <rect key="frame" x="154.66666666666666" y="698" width="66" height="66"/>
+                                <state key="normal" image="playButton">
                                     <color key="titleColor" red="0.52773141860961914" green="0.91153925657272339" blue="0.54712063074111938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showBearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s00-OD-PdX"/>
+                                    <action selector="showBearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsY-t6-zjI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7U-TK-Zpd">
+                                <rect key="frame" x="155.66666666666666" y="58" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" name="defaultBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYM-nd-bIW">
+                                <rect key="frame" x="309" y="44" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="infoButton"/>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9P4-sE-zS5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,6 +47,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="7uU-EZ-as2" secondAttribute="trailing" id="6ko-zW-lYY"/>
                             <constraint firstItem="o33-2Z-vwg" firstAttribute="bottom" secondItem="v7I-D1-VVl" secondAttribute="bottom" constant="14" id="7Lb-vd-tIW"/>
+                            <constraint firstItem="f7U-TK-Zpd" firstAttribute="centerX" secondItem="IJf-TO-9hT" secondAttribute="centerX" id="AeN-ZJ-gQv"/>
+                            <constraint firstItem="f7U-TK-Zpd" firstAttribute="top" secondItem="o33-2Z-vwg" secondAttribute="top" constant="14" id="BJB-Mp-ffe"/>
                             <constraint firstItem="v7I-D1-VVl" firstAttribute="centerX" secondItem="IJf-TO-9hT" secondAttribute="centerX" id="DtQ-EC-iYg"/>
                             <constraint firstItem="7uU-EZ-as2" firstAttribute="top" secondItem="IJf-TO-9hT" secondAttribute="top" id="Nbv-2A-Ix2"/>
                             <constraint firstAttribute="bottom" secondItem="7uU-EZ-as2" secondAttribute="bottom" id="R2k-UQ-jai"/>
@@ -44,13 +59,15 @@
                     <navigationItem key="navigationItem" id="jxM-tf-1VO"/>
                     <connections>
                         <outlet property="arView" destination="7uU-EZ-as2" id="mZf-LJ-oVG"/>
-                        <outlet property="buttonView" destination="v7I-D1-VVl" id="g6v-gE-Cer"/>
+                        <outlet property="infoButtonView" destination="NYM-nd-bIW" id="7ia-zw-FR4"/>
+                        <outlet property="locationLabel" destination="f7U-TK-Zpd" id="wzF-2s-vGb"/>
+                        <outlet property="playButton" destination="v7I-D1-VVl" id="Mqa-7O-aEg"/>
                         <segue destination="tcn-iL-fmd" kind="presentation" identifier="arToInfoPage" id="XoW-hd-TxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="133.74384236453201"/>
+            <point key="canvasLocation" x="1078.2608695652175" y="133.25892857142856"/>
         </scene>
         <!--Info Page View Controller-->
         <scene sceneID="vVG-fK-6vo">
@@ -97,27 +114,11 @@
             </objects>
             <point key="canvasLocation" x="2029.5999999999999" y="133.74384236453201"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xEP-vj-O34">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yfq-EJ-Rac" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eLf-H8-EGb">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mfr-5q-23h"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qKh-8M-8Wz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arrow" width="374" height="174"/>
+        <image name="infoButton" width="33" height="33"/>
+        <image name="playButton" width="66" height="66"/>
         <namedColor name="defaultBlue">
             <color red="0.058823529411764705" green="0.45882352941176469" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

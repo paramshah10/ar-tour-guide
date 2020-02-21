@@ -111,7 +111,9 @@ class LocationTextInfo {
 
                         The Fowler Museum at UCLA explores global arts and cultures with an emphasis on works from Africa, Asia, the Pacific, and the Americas—past and present. It is named in honor of Francis E. Fowler Jr., inventor and lifelong art collector. "Reflecting Culture," an exhibit of Fowler's silver collection, is on permanent display. The Fowler offers free admission and easy parking to all its visitors.
 
-                        """
+                        """,
+        
+        "Sproul Hall": "I don't like classic triples."
         
     ]
     
