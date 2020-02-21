@@ -21,7 +21,7 @@ class LocationList {
     
     func isInAnyLocation(user: CLLocationCoordinate2D) -> String {
         for location in locations {
-            if(location.isInLocation(user: user)) {
+            if (location.isInLocation(user: user)) {
                 return location.getName()
             }
         }

@@ -14,7 +14,9 @@ class ARViewController: UIViewController {
     
     // IBOutlets
     @IBOutlet weak var arView: ARView!
-    @IBOutlet weak var buttonView: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var infoButtonView: UIButton!
+    @IBOutlet weak var locationLabel: UILabel!
     
     // Variables and Constants.
     let locationManager = CLLocationManager()
@@ -26,20 +28,6 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // View initialization.
-        buttonView.isHidden = true;
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Refresh",
-            style: .plain,
-            target: self,
-            action: #selector(refreshPressed))
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Info",
-            style: .plain,
-            target: self,
-            action: #selector(infoButtonPressed))
-        
         // Location initialization.
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
@@ -47,15 +35,15 @@ class ARViewController: UIViewController {
         locationManager.delegate = self as CLLocationManagerDelegate
         
         // Defining new locations.
-        let sproulCourt = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.072377,
-                longitude: -118.450842),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.072170,
-                longitude: -118.450540),
-            name: "Sproul Court")
-        
+//        let sproulCourt = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.072377,
+//                longitude: -118.450842),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.072170,
+//                longitude: -118.450540),
+//            name: "Sproul Court")
+//
         let sproulHall = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.072656,
@@ -64,24 +52,24 @@ class ARViewController: UIViewController {
                 latitude: 34.071729,
                 longitude: -118.449758),
             name: "Sproul Hall")
-        
-        let courtside = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.073864,
-                longitude: -118.450351),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.073467,
-                longitude: -118.449333),
-            name: "Courtside")
-        
-        let mooreHall = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.070777,
-                longitude: -118.443064),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.070055,
-                longitude: -118.442479),
-            name: "Moore Hall")
+//
+//        let courtside = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.073864,
+//                longitude: -118.450351),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.073467,
+//                longitude: -118.449333),
+//            name: "Courtside")
+//
+//        let mooreHall = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.070777,
+//                longitude: -118.443064),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.070055,
+//                longitude: -118.442479),
+//            name: "Moore Hall")
         
         let covelCommons = Location(
             coord1: CLLocationCoordinate2D(
@@ -92,18 +80,18 @@ class ARViewController: UIViewController {
                 longitude: -118.449628),
             name: "Covel Commons")
         
-        let powellLibrary = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.072190,
-                longitude: -118.442662),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.071922,
-                longitude:  -118.441635),
-            name: "Powell Library")
+//        let powellLibrary = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.072190,
+//                longitude: -118.442662),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.071922,
+//                longitude:  -118.441635),
+//            name: "Powell Library")
         
         // Adding new locations.
 //        locationList.addLocation(location: sproulCourt)
-//        locationList.addLocation(location: sproulHall)
+        locationList.addLocation(location: sproulHall)
 //        locationList.addLocation(location: courtside)
 //        locationList.addLocation(location: mooreHall)
         locationList.addLocation(location: covelCommons)
@@ -111,25 +99,22 @@ class ARViewController: UIViewController {
         
     }
     
-    @objc func refreshPressed() {
-        
-        errorShown = false
-        didRender = false
-        arView.scene.anchors.removeAll()
-        
-    }
-    
-    @objc func infoButtonPressed() {
-        self.performSegue(withIdentifier: "arToInfoPage", sender: self)
-    }
-    
     @IBAction func showBearButton(_ sender: UIButton) {
-        // Load the scene from the Reality File.
         let bearAnchor = try! Bear.loadScene()
-        // Add the box anchor to the scene.
+        
+        if !arView.scene.anchors.isEmpty {
+            arView.scene.anchors.removeAll()
+        }
+        
         arView.scene.anchors.append(bearAnchor)
-        buttonView.isHidden = true;
         didRender = true
+        
+    }
+    
+    @IBAction func infoButtonPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "arToInfoPage", sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -176,7 +161,10 @@ extension ARViewController: CLLocationManagerDelegate {
             errorShown = false
             if !didRender {
                 navigationItem.title = currentLocation
-                buttonView.isHidden = false
+                playButton.isHidden = false
+                infoButtonView.isHidden = false
+                locationLabel.isHidden = false
+                locationLabel.text = currentLocation
                 
             }
             
@@ -185,7 +173,10 @@ extension ARViewController: CLLocationManagerDelegate {
                 errorShown = true
                 didRender = false
                 navigationItem.title = "Invalid location!"
-                buttonView.isHidden = true
+                playButton.isHidden = true
+                infoButtonView.isHidden = true
+                locationLabel.isHidden = true
+                locationLabel.text = nil
                 let alert = UIAlertController(title: "An error occured!", message: "This is not a valid location!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
                 self.present(alert, animated: true)
