@@ -10,7 +10,7 @@ import UIKit
 import RealityKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class ARViewController: UIViewController {
     
     // IBOutlets
     @IBOutlet weak var arView: ARView!
@@ -21,18 +21,24 @@ class ViewController: UIViewController {
     var locationList = LocationList()
     var errorShown = false
     var didRender = false
+    var currentLocation = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // View initialization.
         buttonView.isHidden = true;
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Refresh"
-            ,
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Refresh",
             style: .plain,
             target: self,
             action: #selector(refreshPressed))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Info",
+            style: .plain,
+            target: self,
+            action: #selector(infoButtonPressed))
         
         // Location initialization.
         locationManager.requestAlwaysAuthorization()
@@ -96,12 +102,12 @@ class ViewController: UIViewController {
             name: "Powell Library")
         
         // Adding new locations.
-        locationList.addLocation(location: sproulCourt)
-        locationList.addLocation(location: sproulHall)
-        locationList.addLocation(location: courtside)
-        locationList.addLocation(location: mooreHall)
+//        locationList.addLocation(location: sproulCourt)
+//        locationList.addLocation(location: sproulHall)
+//        locationList.addLocation(location: courtside)
+//        locationList.addLocation(location: mooreHall)
         locationList.addLocation(location: covelCommons)
-        locationList.addLocation(location: powellLibrary)
+//        locationList.addLocation(location: powellLibrary)
         
     }
     
@@ -113,6 +119,10 @@ class ViewController: UIViewController {
         
     }
     
+    @objc func infoButtonPressed() {
+        self.performSegue(withIdentifier: "arToInfoPage", sender: self)
+    }
+    
     @IBAction func showBearButton(_ sender: UIButton) {
         // Load the scene from the Reality File.
         let bearAnchor = try! Bear.loadScene()
@@ -122,18 +132,27 @@ class ViewController: UIViewController {
         didRender = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "arToInfoPage" {
+            let destinationVC = segue.destination as! InfoPageViewController
+            destinationVC.location = self.currentLocation
+        }
+        
+    }
+    
     
 }
 
 // MARK: - ViewController extensions.
 
-extension ViewController: CLLocationManagerDelegate {
+extension ARViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let lastLocation = locations.last
         
-        let currentLocation = locationList.isInAnyLocation(user: lastLocation!.coordinate)
+        currentLocation = locationList.isInAnyLocation(user: lastLocation!.coordinate)
         navigationController?.title = currentLocation
         
         switch currentLocation {
@@ -158,6 +177,7 @@ extension ViewController: CLLocationManagerDelegate {
             if !didRender {
                 navigationItem.title = currentLocation
                 buttonView.isHidden = false
+                
             }
             
         default:
