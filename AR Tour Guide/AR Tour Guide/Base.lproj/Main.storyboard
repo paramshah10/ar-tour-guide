@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yOl-qC-XS7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,55 +11,77 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" userLabel="ARViewController" customClass="ViewController" customModule="AR_Tour_Guide" customModuleProvider="target" sceneMemberID="viewController">
-                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="YMj-ur-C10">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arView>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nD-Pl-JtJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </arView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVr-PG-5Ez">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sVr-PG-5Ez" firstAttribute="trailing" secondItem="YMj-ur-C10" secondAttribute="trailing" id="AT1-5J-DOO"/>
+                            <constraint firstItem="sVr-PG-5Ez" firstAttribute="height" secondItem="YMj-ur-C10" secondAttribute="height" id="B4a-7h-0SD"/>
+                            <constraint firstItem="5nD-Pl-JtJ" firstAttribute="top" secondItem="YMj-ur-C10" secondAttribute="top" id="HLF-rp-OQ3"/>
+                            <constraint firstItem="sVr-PG-5Ez" firstAttribute="width" secondItem="YMj-ur-C10" secondAttribute="width" id="JQY-6P-qbN"/>
+                            <constraint firstAttribute="bottom" secondItem="5nD-Pl-JtJ" secondAttribute="bottom" id="Pqa-5M-9bD"/>
+                            <constraint firstItem="sVr-PG-5Ez" firstAttribute="leading" secondItem="YMj-ur-C10" secondAttribute="leading" id="U9N-OC-Kir"/>
+                            <constraint firstAttribute="bottom" secondItem="sVr-PG-5Ez" secondAttribute="bottom" id="Yqc-RV-aR2"/>
+                            <constraint firstItem="sVr-PG-5Ez" firstAttribute="top" secondItem="YMj-ur-C10" secondAttribute="top" id="tfz-fm-E5q"/>
+                            <constraint firstItem="8db-ya-WYy" firstAttribute="trailing" secondItem="5nD-Pl-JtJ" secondAttribute="trailing" id="yH4-3l-k8u"/>
+                            <constraint firstItem="5nD-Pl-JtJ" firstAttribute="leading" secondItem="8db-ya-WYy" secondAttribute="leading" id="yx4-YV-Pcn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8db-ya-WYy"/>
+                    </view>
                     <navigationItem key="navigationItem" id="63o-cc-TaG"/>
                     <connections>
-                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
+                        <outlet property="arView" destination="5nD-Pl-JtJ" id="pnx-bc-kTD"/>
+                        <outlet property="scrollView" destination="sVr-PG-5Ez" id="utc-Pq-C1L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="134"/>
+            <point key="canvasLocation" x="247.19999999999999" y="41.379310344827587"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="nwF-Sh-Q4Y">
             <objects>
                 <viewController id="yOl-qC-XS7" customClass="WelcomeViewController" customModule="AR_Tour_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0p-sY-ESc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomePageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Cop-F8-t4l">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="H15-RM-iL5">
-                                <rect key="frame" x="20" y="145" width="374" height="606.5"/>
+                                <rect key="frame" x="0.33333333333334281" y="103" width="374.33333333333326" height="606.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Tour Guide" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kF-aQ-MQy">
-                                        <rect key="frame" x="18" y="0.0" width="338" height="62.5"/>
+                                        <rect key="frame" x="18.333333333333343" y="0.0" width="338" height="62.333333333333336"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
                                         <color key="textColor" red="0.0" green="0.69803921568627447" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomePageBruin" translatesAutoresizingMaskIntoConstraints="NO" id="eUg-Ay-vko">
-                                        <rect key="frame" x="72" y="212.5" width="230" height="200"/>
+                                        <rect key="frame" x="72.333333333333343" y="212.33333333333331" width="230.00000000000003" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="230" id="qKh-3s-0m4"/>
                                             <constraint firstAttribute="height" constant="200" id="rVR-Z7-kPN"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4n-Ev-bwU">
-                                        <rect key="frame" x="122.5" y="562.5" width="129" height="44"/>
+                                        <rect key="frame" x="122.66666666666669" y="562.33333333333337" width="129" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Get Started">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="startButtonPressedWithSender:" destination="yOl-qC-XS7" eventType="touchDown" id="Wrp-Mx-cYh"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="5HD-6x-4If"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -85,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo7-aT-caE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="197"/>
+            <point key="canvasLocation" x="1470" y="42"/>
         </scene>
     </scenes>
     <resources>
