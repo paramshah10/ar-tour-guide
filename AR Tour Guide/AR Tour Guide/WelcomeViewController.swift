@@ -10,6 +10,10 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     @IBOutlet var StartButton: UIButton!
+    @IBAction func startButtonTapped(sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: "Onboarded")
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //#0F75BC

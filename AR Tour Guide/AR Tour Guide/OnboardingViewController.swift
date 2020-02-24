@@ -9,10 +9,21 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
+    @IBOutlet var backgroundImage: UIImageView! {
+        didSet {
+            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            view.addSubview(blurEffectView)
+        }
+    }
+    @IBAction func doneButtonTapped(sender: UIButton) {
+        UserDefaults.standard.set(true, forKey: "onboarded")
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     

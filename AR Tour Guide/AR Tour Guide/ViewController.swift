@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     var blurEffectView: UIVisualEffectView!
     let pageControl = UIPageControl(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     var pageControlView: UIView!
+    var getStartedView: UIView!
     var frameVal = CGRect(x: 0, y: 0, width: 0, height: 0)
     @IBAction func onBoardingDone(sender: UIButton) {
 //        blurEffectView.removeFromSuperview()
@@ -29,6 +30,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
         UserDefaults.standard.set(true, forKey: "onboarded")
     }
+    @IBAction func getStartedPressed(sender: UIButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.getStartedView.alpha = 0
+        }) { _ in
+            self.getStartedView.removeFromSuperview()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //MARK: Onboarding
@@ -42,10 +50,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         pageControlView = UIView(frame: CGRect(x: view.center.x, y: view.frame.size.height - 50, width: 100, height: 100))
         pageControl.numberOfPages = 4
         pageControlView.addSubview(pageControl)
+        getStartedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         if !UserDefaults.standard.bool(forKey: "onboarded") {
             view.addSubview(blurEffectView)
             view.addSubview(scrollView)
             view.addSubview(pageControlView)
+            view.addSubview(getStartedView)
             var x = CGFloat(0)
             //firstview
             frameVal.origin.x = scrollView.frame.size.width * CGFloat(0)
@@ -98,6 +108,31 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             x = view4.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
             scrollView.delegate = self
+            //getStartedView
+            let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+            backgroundImage.image = UIImage(named: "backgroundBlue")
+            getStartedView.addSubview(backgroundImage)
+            let headerLabel = UILabel(frame: CGRect(x: view.frame.size.width*0.1, y: view.frame.size.height*0.2, width: view.frame.size.width*0.8, height: 50))
+            headerLabel.textColor = .white
+            headerLabel.text = "AR Tour Guide"
+            headerLabel.textAlignment = .center
+            headerLabel.adjustsFontSizeToFitWidth = true
+            headerLabel.font = UIFont.systemFont(ofSize: 70)
+            getStartedView.addSubview(headerLabel)
+            let logoImageView = UIImageView(frame: CGRect(x: view.center.x-view.frame.size.width*0.3, y: view.center.y-view.frame.size.width*0.3, width: view.frame.size.width*0.6, height: view.frame.size.width*0.6))
+            logoImageView.backgroundColor = .black
+            logoImageView.contentMode = .scaleAspectFill
+            logoImageView.clipsToBounds = true
+            logoImageView.image = UIImage(named: "logo")
+            getStartedView.addSubview(logoImageView)
+            let startButton = UIButton(frame: CGRect(x: view.frame.size.width*0.1, y: view.frame.size.height*0.7, width: view.frame.size.width*0.8, height: 50))
+            startButton.setTitleColor(.systemBlue, for: .normal)
+            startButton.backgroundColor = .white
+            startButton.setTitle("Get Started", for: .normal)
+            startButton.layer.cornerRadius = 10
+            startButton.addTarget(self, action: #selector(getStartedPressed(sender:)), for: .touchUpInside)
+            getStartedView.addSubview(startButton)
+            
         }
         
         
