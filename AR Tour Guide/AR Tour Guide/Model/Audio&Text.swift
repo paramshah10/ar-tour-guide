@@ -10,18 +10,17 @@ import Foundation
 import AVFoundation
 
 public struct Audio {
-    
-    func playAudio(name: String, type: String) -> Int
+    var audioPlayer = AVAudioPlayer()
+    mutating func playAudio(name: String, type: String) -> Int
     {
-        var audioPlayer = AVAudioPlayer()
         
         let sound = Bundle.main.path(forResource: name, ofType: type)
         
         do
         {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
             //audioPlayer.prepareToPlay()
-            audioPlayer.play()
+            self.audioPlayer.play()
         }
         catch
         {
@@ -34,6 +33,6 @@ public struct Audio {
 }
 
 
-public struct Text {
-    
-}
+//public struct Text {
+//
+//}

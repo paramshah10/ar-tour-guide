@@ -14,7 +14,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     //var audioPlayer = AVAudioPlayer()
-    let audio = Audio()
+    var audio = Audio()
 
     // IBOutlets
     @IBOutlet weak var arView: ARView!
