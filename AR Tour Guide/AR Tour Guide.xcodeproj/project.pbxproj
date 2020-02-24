@@ -20,7 +20,6 @@
 		A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEA23E7D16D00676F82 /* LocationList.swift */; };
 		A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEB23E7D16D00676F82 /* Location.swift */; };
 		A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEE23E7D67700676F82 /* Bear.rcproject */; };
-		CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		A4D8AAEA23E7D16D00676F82 /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 		A4D8AAEB23E7D16D00676F82 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A4D8AAEE23E7D67700676F82 /* Bear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bear.rcproject; sourceTree = "<group>"; };
-		CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +80,6 @@
 				A4A7DAA623F10DBC00B1180F /* CrazyBox.rcproject */,
 				6ACA3D2223DE7C84002320AB /* Assets.xcassets */,
 				6ACA3D2723DE7C85002320AB /* Info.plist */,
-				CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */,
 			);
 			path = "AR Tour Guide";
 			sourceTree = "<group>";
@@ -188,7 +185,6 @@
 			files = (
 				A412AB8C23FA45670012F6CA /* LocationTextInfo.swift in Sources */,
 				6ACA3D1C23DE7C79002320AB /* ARViewController.swift in Sources */,
-				CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */,
 				6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */,
 				A412AB8A23FA3E650012F6CA /* InfoPageViewController.swift in Sources */,
 				A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */,
@@ -341,13 +337,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HPW4K7SFXL;
+				DEVELOPMENT_TEAM = XGAR27J6GF;
 				INFOPLIST_FILE = "AR Tour Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guide1";
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guide6";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,13 +355,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HPW4K7SFXL;
+				DEVELOPMENT_TEAM = XGAR27J6GF;
 				INFOPLIST_FILE = "AR Tour Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guide1";
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guide6";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
