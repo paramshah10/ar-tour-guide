@@ -10,7 +10,7 @@ import UIKit
 import RealityKit
 import CoreLocation
 
-class ARViewController: UIViewController, UIScrollDelegate {
+class ARViewController: UIViewController, UIScrollViewDelegate {
     
     // IBOutlets
     @IBOutlet weak var arView: ARView!
@@ -174,21 +174,42 @@ class ARViewController: UIViewController, UIScrollDelegate {
             imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
-            imageView.image = UIImage(named: "onboarding4")
+            imageView.image = UIImage(named: "onboarding3")
             view3.addSubview(imageView)
             self.scrollView.addSubview(view3)
             x = view3.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
             //fourthview
             let view4 = UIView(frame: CGRect(x: x, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
-            let getStartedButton = UIButton(frame: CGRect(x: scrollView.frame.size.width*0.5-75, y: scrollView.frame.size.height*0.5-50, width: 150, height: 50))
-            getStartedButton.titleLabel?.textColor = .white
-            getStartedButton.setTitle("Get Started", for: .normal)
-            getStartedButton.backgroundColor = .systemBlue
-            getStartedButton.layer.cornerRadius = getStartedButton.frame.size.height/2
-            getStartedButton.layer.masksToBounds = true
-            getStartedButton.addTarget(self, action: #selector(onBoardingDone(sender:)), for: .touchUpInside)
-            view4.addSubview(getStartedButton)
+//            let getStartedButton = UIButton(frame: CGRect(x: scrollView.frame.size.width*0.5-75, y: scrollView.frame.size.height*0.5-50, width: 150, height: 50))
+//            getStartedButton.titleLabel?.textColor = .white
+//            getStartedButton.setTitle("Get Started", for: .normal)
+//            getStartedButton.backgroundColor = .systemBlue
+//            getStartedButton.layer.cornerRadius = getStartedButton.frame.size.height/2
+//            getStartedButton.layer.masksToBounds = true
+//            getStartedButton.addTarget(self, action: #selector(onBoardingDone(sender:)), for: .touchUpInside)
+//            view4.addSubview(getStartedButton)
+            let continueButton = UIButton(frame: CGRect(x: scrollView.frame.size.width*0.1, y: scrollView.frame.size.height*0.7, width: scrollView.frame.size.width*0.8, height: 50))
+            continueButton.setTitleColor(.systemBlue, for: .normal)
+            continueButton.backgroundColor = .white
+            continueButton.setTitle("Continue", for: .normal)
+            continueButton.layer.cornerRadius = 10
+            continueButton.addTarget(self, action: #selector(onBoardingDone(sender:)), for: .touchUpInside)
+            view4.addSubview(continueButton)
+            let viewLabel = UILabel(frame: CGRect(x: scrollView.frame.size.width*0.1, y: scrollView.frame.size.height*0.2, width: scrollView.frame.size.width*0.8, height: 50))
+            viewLabel.textColor = .white
+            viewLabel.text = "AR Tour Guide"
+            viewLabel.textAlignment = .center
+            viewLabel.adjustsFontSizeToFitWidth = true
+            viewLabel.font = UIFont.systemFont(ofSize: 70)
+            view4.addSubview(viewLabel)
+            let viewImage = UIImageView(frame: CGRect(x: view.center.x-view.frame.size.width*0.3, y: view.center.y-view.frame.size.width*0.3, width: view.frame.size.width*0.6, height: view.frame.size.width*0.6))
+            viewImage.backgroundColor = .black
+            viewImage.contentMode = .scaleAspectFill
+            viewImage.layer.cornerRadius = view.frame.size.width*0.3
+            viewImage.clipsToBounds = true
+            viewImage.image = UIImage(named: "logo")
+            view4.addSubview(viewImage)
             self.scrollView.addSubview(view4)
             x = view4.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
@@ -207,6 +228,7 @@ class ARViewController: UIViewController, UIScrollDelegate {
             let logoImageView = UIImageView(frame: CGRect(x: view.center.x-view.frame.size.width*0.3, y: view.center.y-view.frame.size.width*0.3, width: view.frame.size.width*0.6, height: view.frame.size.width*0.6))
             logoImageView.backgroundColor = .black
             logoImageView.contentMode = .scaleAspectFill
+            logoImageView.layer.cornerRadius = view.frame.size.width*0.3
             logoImageView.clipsToBounds = true
             logoImageView.image = UIImage(named: "logo")
             getStartedView.addSubview(logoImageView)
@@ -217,7 +239,6 @@ class ARViewController: UIViewController, UIScrollDelegate {
             startButton.layer.cornerRadius = 10
             startButton.addTarget(self, action: #selector(getStartedPressed(sender:)), for: .touchUpInside)
             getStartedView.addSubview(startButton)
-            
         }
         
     }

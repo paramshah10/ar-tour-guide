@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </arView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-D1-VVl">
-                                <rect key="frame" x="154.66666666666666" y="698" width="66" height="66"/>
+                                <rect key="frame" x="121.66666666666669" y="632" width="132" height="132"/>
                                 <state key="normal" image="playButton">
                                     <color key="titleColor" red="0.52773141860961914" green="0.91153925657272339" blue="0.54712063074111938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -42,14 +42,21 @@
                                     <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9P4-sE-zS5"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSY-dK-IDV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="MSY-dK-IDV" firstAttribute="top" secondItem="IJf-TO-9hT" secondAttribute="top" id="0NG-ri-ML3"/>
+                            <constraint firstItem="MSY-dK-IDV" firstAttribute="leading" secondItem="o33-2Z-vwg" secondAttribute="leading" id="1dG-TZ-Ewh"/>
                             <constraint firstAttribute="trailing" secondItem="7uU-EZ-as2" secondAttribute="trailing" id="6ko-zW-lYY"/>
                             <constraint firstItem="o33-2Z-vwg" firstAttribute="bottom" secondItem="v7I-D1-VVl" secondAttribute="bottom" constant="14" id="7Lb-vd-tIW"/>
                             <constraint firstItem="f7U-TK-Zpd" firstAttribute="centerX" secondItem="IJf-TO-9hT" secondAttribute="centerX" id="AeN-ZJ-gQv"/>
                             <constraint firstItem="f7U-TK-Zpd" firstAttribute="top" secondItem="o33-2Z-vwg" secondAttribute="top" constant="14" id="BJB-Mp-ffe"/>
                             <constraint firstItem="v7I-D1-VVl" firstAttribute="centerX" secondItem="IJf-TO-9hT" secondAttribute="centerX" id="DtQ-EC-iYg"/>
+                            <constraint firstItem="MSY-dK-IDV" firstAttribute="trailing" secondItem="o33-2Z-vwg" secondAttribute="trailing" id="Gm5-We-AOG"/>
+                            <constraint firstAttribute="bottom" secondItem="MSY-dK-IDV" secondAttribute="bottom" id="H7h-4V-cAw"/>
                             <constraint firstItem="7uU-EZ-as2" firstAttribute="top" secondItem="IJf-TO-9hT" secondAttribute="top" id="Nbv-2A-Ix2"/>
                             <constraint firstAttribute="bottom" secondItem="7uU-EZ-as2" secondAttribute="bottom" id="R2k-UQ-jai"/>
                             <constraint firstItem="7uU-EZ-as2" firstAttribute="leading" secondItem="o33-2Z-vwg" secondAttribute="leading" id="c4H-Sp-gLc"/>
@@ -62,12 +69,13 @@
                         <outlet property="infoButtonView" destination="NYM-nd-bIW" id="7ia-zw-FR4"/>
                         <outlet property="locationLabel" destination="f7U-TK-Zpd" id="wzF-2s-vGb"/>
                         <outlet property="playButton" destination="v7I-D1-VVl" id="Mqa-7O-aEg"/>
+                        <outlet property="scrollView" destination="MSY-dK-IDV" id="liF-9G-vfc"/>
                         <segue destination="tcn-iL-fmd" kind="presentation" identifier="arToInfoPage" id="XoW-hd-TxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078.2608695652175" y="133.25892857142856"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="133.00492610837438"/>
         </scene>
         <!--Info Page View Controller-->
         <scene sceneID="vVG-fK-6vo">

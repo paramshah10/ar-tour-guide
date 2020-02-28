@@ -341,13 +341,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HPW4K7SFXL;
+				DEVELOPMENT_TEAM = 3634BL58F7;
 				INFOPLIST_FILE = "AR Tour Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guide1";
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guidetest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
