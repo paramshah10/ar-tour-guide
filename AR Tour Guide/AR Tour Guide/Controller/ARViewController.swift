@@ -10,7 +10,7 @@ import UIKit
 import RealityKit
 import CoreLocation
 
-class ARViewController: UIViewController, UIScrollDelegate {
+class ARViewController: UIViewController, UIScrollViewDelegate {
     
     // IBOutlets
     @IBOutlet weak var arView: ARView!
