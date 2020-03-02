@@ -64,15 +64,15 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
         locationManager.delegate = self as CLLocationManagerDelegate
         
         // Defining new locations.
-//        let sproulCourt = Location(
-//            coord1: CLLocationCoordinate2D(
-//                latitude: 34.072377,
-//                longitude: -118.450842),
-//            coord2: CLLocationCoordinate2D(
-//                latitude: 34.072170,
-//                longitude: -118.450540),
-//            name: "Sproul Court")
-//
+        let sproulCourt = Location(
+            coord1: CLLocationCoordinate2D(
+                latitude: 34.072377,
+                longitude: -118.450842),
+            coord2: CLLocationCoordinate2D(
+                latitude: 34.072170,
+                longitude: -118.450540),
+            name: "Sproul Court")
+
         let sproulHall = Location(
             coord1: CLLocationCoordinate2D(
                 latitude: 34.072656,
@@ -81,24 +81,24 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
                 latitude: 34.071729,
                 longitude: -118.449758),
             name: "Sproul Hall")
-//
-//        let courtside = Location(
-//            coord1: CLLocationCoordinate2D(
-//                latitude: 34.073864,
-//                longitude: -118.450351),
-//            coord2: CLLocationCoordinate2D(
-//                latitude: 34.073467,
-//                longitude: -118.449333),
-//            name: "Courtside")
-//
-//        let mooreHall = Location(
-//            coord1: CLLocationCoordinate2D(
-//                latitude: 34.070777,
-//                longitude: -118.443064),
-//            coord2: CLLocationCoordinate2D(
-//                latitude: 34.070055,
-//                longitude: -118.442479),
-//            name: "Moore Hall")
+
+        let courtside = Location(
+            coord1: CLLocationCoordinate2D(
+                latitude: 34.073864,
+                longitude: -118.450351),
+            coord2: CLLocationCoordinate2D(
+                latitude: 34.073467,
+                longitude: -118.449333),
+            name: "Courtside")
+
+        let mooreHall = Location(
+            coord1: CLLocationCoordinate2D(
+                latitude: 34.070777,
+                longitude: -118.443064),
+            coord2: CLLocationCoordinate2D(
+                latitude: 34.070055,
+                longitude: -118.442479),
+            name: "Moore Hall")
         
         let covelCommons = Location(
             coord1: CLLocationCoordinate2D(
@@ -109,22 +109,24 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
                 longitude: -118.449628),
             name: "Covel Commons")
         
-//        let powellLibrary = Location(
-//            coord1: CLLocationCoordinate2D(
-//                latitude: 34.072190,
-//                longitude: -118.442662),
-//            coord2: CLLocationCoordinate2D(
-//                latitude: 34.071922,
-//                longitude:  -118.441635),
-//            name: "Powell Library")
+        let powellLibrary = Location(
+            coord1: CLLocationCoordinate2D(
+                latitude: 34.072190,
+                longitude: -118.442662),
+            coord2: CLLocationCoordinate2D(
+                latitude: 34.071922,
+                longitude:  -118.441635),
+            name: "Powell Library")
         
         // Adding new locations.
-//        locationList.addLocation(location: sproulCourt)
+        locationList.addLocation(location: sproulCourt)
         locationList.addLocation(location: sproulHall)
-//        locationList.addLocation(location: courtside)
-//        locationList.addLocation(location: mooreHall)
+        locationList.addLocation(location: courtside)
+        locationList.addLocation(location: mooreHall)
         locationList.addLocation(location: covelCommons)
-//        locationList.addLocation(location: powellLibrary)
+        locationList.addLocation(location: powellLibrary)
+        
+        // Onboarding code.
         UserDefaults.standard.set(true, forKey: "needOnboarding")
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -244,7 +246,8 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func showBearButton(_ sender: UIButton) {
-        let bearAnchor = try! Bear.loadScene()
+        print("Bear button pressed.")
+        let bearAnchor = try! DancingBear.loadScene()
         
         if !arView.scene.anchors.isEmpty {
             arView.scene.anchors.removeAll()
@@ -252,11 +255,11 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
         
         arView.scene.anchors.append(bearAnchor)
         didRender = true
-        
     }
     
     @IBAction func infoButtonPressed(_ sender: UIButton) {
         
+        print("Info button pressed.")
         self.performSegue(withIdentifier: "arToInfoPage", sender: self)
         
     }
