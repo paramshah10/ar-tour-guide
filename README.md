@@ -39,7 +39,7 @@ Github: *@ishagonu*
 
 **Rachel Li, Software Developer**
 
-[//]: <> (<img src="images/Rachel.jpg" width="250">)
+<img src="images/Rachel.jpg" width="250">
 Github: *@rachelli99*
 
 ### Design and 3D Modeling
