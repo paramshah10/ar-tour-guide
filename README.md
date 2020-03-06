@@ -13,34 +13,46 @@ AR Tour Guide is a interactive tour guide app that uses augmented reality to enh
 **Param Shah**
 
 <img src="images/Param.jpg" width="250">
+
 Github: *@paramshah10*
+
 
 **Suraj Vathsa**
 
 <img src="images/Suraj.jpg" width="250">
+
 Github: *@svathsa*
+
 
 ### Software Team
 
 **Adithya Nair, Software Developer**
 
 <img src="images/Adithya.jpg" width="250">
+
 Github: *@adithya-0800*
+
 
 **Daniel Liu, Software Developer**
 
 <img src="images/Daniel.jpg" width="250">
+
 Github: *@danielliu524*
+
 
 **Isha Gonugunta, Software Developer**
 
 <img src="images/Isha.jpg" width="250">
+
 Github: *@ishagonu*
+
 
 **Rachel Li, Software Developer**
 
 <img src="images/Rachel.jpg" width="250">
+
 Github: *@rachelli99*
+
 
 ### Design and 3D Modeling
 
@@ -51,4 +63,6 @@ Github: *@rachelli99*
 **Zachary Chang, 3D Modeler**
 
 <img src="images/Zach.jpg" width="250">
+
 Github: *@zachang890*
+
