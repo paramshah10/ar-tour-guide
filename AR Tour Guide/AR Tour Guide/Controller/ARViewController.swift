@@ -126,7 +126,40 @@ class ARViewController: UIViewController {
         
     }
     
-    
+    //Side Panel
+//    var sidePanel: UIViewController!
+//    var centerController: UIViewController!
+//    var isExpanded = false
+//    var delegate: ARViewControllerDelegate?
+//
+//    @objc func handleMenuToggle() {
+//
+//        delegate?.handleMenuToggle()
+//
+//    }
+//
+//    func configureSidePanel() {
+//        if sidePanel == nil {
+//            sidePanel = SidePanel ()
+//            view.insertSubview(sidePanel.view, at: 0)
+//            addChild(sidePanel)
+//            sidePanel.didMove(toParent: self)
+//        }
+//    }
+//
+//    func showSidePanel(shouldExpand: Bool) {
+//        if shouldExpand {
+//            //show menu
+//            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//
+//            }, completion: nil)
+//        }
+//        else {
+//            //hide menu
+//        }
+//    }
+
+
 }
 
 // MARK: - ViewController extensions.
@@ -186,3 +219,16 @@ extension ARViewController: CLLocationManagerDelegate {
         
     }
 }
+
+////Side Panel
+//extension ARViewController: ARViewControllerDelegate {
+//
+//    func handleMenuToggle() {
+//
+//        if (!isExpanded){
+//            configureSidePanel()
+//        }
+//        isExpanded = !isExpanded
+//        showSidePanel(shouldExpand: isExpanded)
+//    }
+//}

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </arView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-D1-VVl">
-                                <rect key="frame" x="154.66666666666666" y="698" width="66" height="66"/>
+                                <rect key="frame" x="121.66666666666669" y="632" width="132" height="132"/>
                                 <state key="normal" image="playButton">
                                     <color key="titleColor" red="0.52773141860961914" green="0.91153925657272339" blue="0.54712063074111938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

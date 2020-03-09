@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3653CDAC2403826000971D35 /* SidePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653CDAB2403826000971D35 /* SidePanel.swift */; };
+		3653CDD62411FABD00971D35 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653CDD52411FABD00971D35 /* Protocols.swift */; };
 		6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1923DE7C79002320AB /* AppDelegate.swift */; };
 		6ACA3D1C23DE7C79002320AB /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1B23DE7C79002320AB /* ARViewController.swift */; };
 		6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1D23DE7C7A002320AB /* Experience.rcproject */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3653CDAB2403826000971D35 /* SidePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanel.swift; sourceTree = "<group>"; };
+		3653CDD52411FABD00971D35 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Tour Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACA3D1923DE7C79002320AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ACA3D1B23DE7C79002320AB /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3653CDD42411F7FA00971D35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3653CDD52411FABD00971D35 /* Protocols.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6ACA3D0D23DE7C79002320AB = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 		6ACA3D1823DE7C79002320AB /* AR Tour Guide */ = {
 			isa = PBXGroup;
 			children = (
+				3653CDD42411F7FA00971D35 /* Utils */,
 				6ACA3D1923DE7C79002320AB /* AppDelegate.swift */,
 				A49C5E2023EB3607006C4CF8 /* Model */,
 				A49C5E2123EB3610006C4CF8 /* View */,
@@ -111,6 +124,7 @@
 			children = (
 				6ACA3D1B23DE7C79002320AB /* ARViewController.swift */,
 				A412AB8923FA3E650012F6CA /* InfoPageViewController.swift */,
+				3653CDAB2403826000971D35 /* SidePanel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,8 +209,10 @@
 				A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */,
 				A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */,
 				6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */,
+				3653CDD62411FABD00971D35 /* Protocols.swift in Sources */,
 				A4A7DAA723F10DBC00B1180F /* CrazyBox.rcproject in Sources */,
 				A4A7DA7F23EDE95800B1180F /* Bear1.rcproject in Sources */,
+				3653CDAC2403826000971D35 /* SidePanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
