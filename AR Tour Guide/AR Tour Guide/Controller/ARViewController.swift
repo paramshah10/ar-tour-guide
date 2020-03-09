@@ -12,16 +12,19 @@ import CoreLocation
 
 class ARViewController: UIViewController, UIScrollViewDelegate {
     
-    // IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var arView: ARView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var infoButtonView: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var surfaceLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    // Variables and Constants.
+    // MARK: - Variables and Constants
     let locationManager = CLLocationManager()
+    var bearAnchor: DancingBear.Scene?
     var locationList = LocationList()
+    var audioPlayer = Audio()
     var errorShown = false
     var didRender = false
     var currentLocation = ""
@@ -31,11 +34,9 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
     var getStartedView: UIView!
     var frameVal = CGRect(x: 0, y: 0, width: 0, height: 0)
     
-    // IBActions
+    // MARK: - IBActions
     @IBAction func onBoardingDone(sender: UIButton) {
-//        blurEffectView.removeFromSuperview()
-//        scrollView.removeFromSuperview()
-//        pageControlView.removeFromSuperview()
+
         UIView.animate(withDuration: 0.5, animations: {
             self.blurEffectView.alpha = 0; self.pageControlView.alpha = 0; self.scrollView.alpha = 0
         }) { _ in
@@ -44,14 +45,53 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             self.pageControlView.removeFromSuperview()
         }
         UserDefaults.standard.set(true, forKey: "onboarded")
+        
     }
     
     @IBAction func getStartedPressed(sender: UIButton) {
+        
         UIView.animate(withDuration: 0.5, animations: {
             self.getStartedView.alpha = 0
         }) { _ in
             self.getStartedView.removeFromSuperview()
         }
+        
+    }
+    
+    @IBAction func showBearButton(_ sender: UIButton) {
+        
+        print("Bear button pressed.")
+        
+        bearAnchor = try! DancingBear.loadScene()
+        
+        if !arView.scene.anchors.isEmpty {
+            arView.scene.anchors.removeAll()
+        }
+        
+        arView.scene.anchors.append(bearAnchor!)
+        
+        bearAnchor!.actions.behavior.onAction = handleTapOnEntity(_:)
+        
+        didRender = true
+        
+    }
+    
+    @IBAction func infoButtonPressed(_ sender: UIButton) {
+        
+        print("Info button pressed.")
+        self.performSegue(withIdentifier: "arToInfoPage", sender: self)
+        
+    }
+    
+    // MARK: - Functions
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(true)
+        playButton.isHidden = false
+        infoButtonView.isHidden = false
+        locationLabel.isHidden = false
+        surfaceLabel.isHidden = false
+        
     }
     
     override func viewDidLoad() {
@@ -64,41 +104,41 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
         locationManager.delegate = self as CLLocationManagerDelegate
         
         // Defining new locations.
-        let sproulCourt = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.072377,
-                longitude: -118.450842),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.072170,
-                longitude: -118.450540),
-            name: "Sproul Court")
-
-        let sproulHall = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.072656,
-                longitude: -118.450640),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.071729,
-                longitude: -118.449758),
-            name: "Sproul Hall")
-
-        let courtside = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.073864,
-                longitude: -118.450351),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.073467,
-                longitude: -118.449333),
-            name: "Courtside")
-
-        let mooreHall = Location(
-            coord1: CLLocationCoordinate2D(
-                latitude: 34.070777,
-                longitude: -118.443064),
-            coord2: CLLocationCoordinate2D(
-                latitude: 34.070055,
-                longitude: -118.442479),
-            name: "Moore Hall")
+//        let sproulCourt = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.072377,
+//                longitude: -118.450842),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.072170,
+//                longitude: -118.450540),
+//            name: "Sproul Court")
+//
+//        let sproulHall = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.072656,
+//                longitude: -118.450640),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.071729,
+//                longitude: -118.449758),
+//            name: "Sproul Hall")
+//
+//        let courtside = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.073864,
+//                longitude: -118.450351),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.073467,
+//                longitude: -118.449333),
+//            name: "Courtside")
+//
+//        let mooreHall = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.070777,
+//                longitude: -118.443064),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.070055,
+//                longitude: -118.442479),
+//            name: "Moore Hall")
         
         let covelCommons = Location(
             coord1: CLLocationCoordinate2D(
@@ -118,13 +158,23 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
                 longitude:  -118.441635),
             name: "Powell Library")
         
+//        let evergreen = Location(
+//            coord1: CLLocationCoordinate2D(
+//                latitude: 34.071192,
+//                longitude: -118.451767),
+//            coord2: CLLocationCoordinate2D(
+//                latitude: 34.070143,
+//                longitude: -118.449294),
+//            name: "De Neve")
+        
         // Adding new locations.
-        locationList.addLocation(location: sproulCourt)
-        locationList.addLocation(location: sproulHall)
-        locationList.addLocation(location: courtside)
-        locationList.addLocation(location: mooreHall)
+//        locationList.addLocation(location: sproulCourt)
+//        locationList.addLocation(location: sproulHall)
+//        locationList.addLocation(location: courtside)
+//        locationList.addLocation(location: mooreHall)
         locationList.addLocation(location: covelCommons)
         locationList.addLocation(location: powellLibrary)
+//        locationList.addLocation(location: evergreen)
         
         // Onboarding code.
         UserDefaults.standard.set(true, forKey: "needOnboarding")
@@ -144,10 +194,10 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             view.addSubview(pageControlView)
             view.addSubview(getStartedView)
             var x = CGFloat(0)
-            //firstview
+            
+            // First view.
             frameVal.origin.x = scrollView.frame.size.width * CGFloat(0)
             frameVal.size = scrollView.frame.size
-            //var view = UIView(frame: CGRect(x: x, y: scrollView.frame.size.height, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
             let view1 = UIView(frame: CGRect(x: x, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
             var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
             imageView.contentMode = .scaleAspectFit
@@ -157,7 +207,8 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             self.scrollView.addSubview(view1)
             x = view1.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
-            //secondview
+            
+            // Second view.
             frameVal.origin.x = scrollView.frame.size.width * CGFloat(1)
             frameVal.size = scrollView.frame.size
             let view2 = UIView(frame: CGRect(x: x, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
@@ -169,7 +220,8 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             self.scrollView.addSubview(view2)
             x = view2.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
-            //thirdview
+            
+            // Third view.
             frameVal.origin.x = scrollView.frame.size.width * CGFloat(2)
             frameVal.size = scrollView.frame.size
             let view3 = UIView(frame: CGRect(x: x, y: 30, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
@@ -181,16 +233,9 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             self.scrollView.addSubview(view3)
             x = view3.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
-            //fourthview
+            
+            // Fourth view.
             let view4 = UIView(frame: CGRect(x: x, y: 0, width: scrollView.frame.size.width, height: scrollView.frame.size.height))
-//            let getStartedButton = UIButton(frame: CGRect(x: scrollView.frame.size.width*0.5-75, y: scrollView.frame.size.height*0.5-50, width: 150, height: 50))
-//            getStartedButton.titleLabel?.textColor = .white
-//            getStartedButton.setTitle("Get Started", for: .normal)
-//            getStartedButton.backgroundColor = .systemBlue
-//            getStartedButton.layer.cornerRadius = getStartedButton.frame.size.height/2
-//            getStartedButton.layer.masksToBounds = true
-//            getStartedButton.addTarget(self, action: #selector(onBoardingDone(sender:)), for: .touchUpInside)
-//            view4.addSubview(getStartedButton)
             let continueButton = UIButton(frame: CGRect(x: scrollView.frame.size.width*0.1, y: scrollView.frame.size.height*0.7, width: scrollView.frame.size.width*0.8, height: 50))
             continueButton.setTitleColor(.systemBlue, for: .normal)
             continueButton.backgroundColor = .white
@@ -200,7 +245,7 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             view4.addSubview(continueButton)
             let viewLabel = UILabel(frame: CGRect(x: scrollView.frame.size.width*0.1, y: scrollView.frame.size.height*0.2, width: scrollView.frame.size.width*0.8, height: 50))
             viewLabel.textColor = .white
-            viewLabel.text = "AR Tour Guide"
+            viewLabel.text = "tour.AR"
             viewLabel.textAlignment = .center
             viewLabel.adjustsFontSizeToFitWidth = true
             viewLabel.font = UIFont.systemFont(ofSize: 70)
@@ -216,13 +261,14 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
             x = view4.frame.origin.x + scrollView.frame.size.width
             scrollView.contentSize = CGSize(width: x, height: scrollView.frame.size.height)
             scrollView.delegate = self
-            //getStartedView
+            
+            // "Get started" view.
             let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
             backgroundImage.image = UIImage(named: "backgroundBlue")
             getStartedView.addSubview(backgroundImage)
             let headerLabel = UILabel(frame: CGRect(x: view.frame.size.width*0.1, y: view.frame.size.height*0.2, width: view.frame.size.width*0.8, height: 50))
             headerLabel.textColor = .white
-            headerLabel.text = "AR Tour Guide"
+            headerLabel.text = "tour.AR"
             headerLabel.textAlignment = .center
             headerLabel.adjustsFontSizeToFitWidth = true
             headerLabel.font = UIFont.systemFont(ofSize: 70)
@@ -245,25 +291,6 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    @IBAction func showBearButton(_ sender: UIButton) {
-        print("Bear button pressed.")
-        let bearAnchor = try! DancingBear.loadScene()
-        
-        if !arView.scene.anchors.isEmpty {
-            arView.scene.anchors.removeAll()
-        }
-        
-        arView.scene.anchors.append(bearAnchor)
-        didRender = true
-    }
-    
-    @IBAction func infoButtonPressed(_ sender: UIButton) {
-        
-        print("Info button pressed.")
-        self.performSegue(withIdentifier: "arToInfoPage", sender: self)
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "arToInfoPage" {
@@ -274,8 +301,20 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
+        
+    }
+    
+    func handleTapOnEntity(_ entity: Entity?) {
+        guard entity != nil else { return }
+        if (audioPlayer.playAudio(name: currentLocation, type: "wav")) {
+            print("Audio worked!")
+            surfaceLabel.isHidden = true
+        } else {
+            print("Audio failed!")
+        }
     }
     
 }
@@ -290,7 +329,7 @@ extension ARViewController: CLLocationManagerDelegate {
         
         currentLocation = locationList.isInAnyLocation(user: lastLocation!.coordinate)
         navigationController?.title = currentLocation
-        
+        print(currentLocation)
         switch currentLocation {
             
         case "Sproul Court":
@@ -308,6 +347,9 @@ extension ARViewController: CLLocationManagerDelegate {
         case "Powell Library":
             fallthrough
             
+        case "De Neve":
+            fallthrough
+            
         case "Moore Hall":
             errorShown = false
             if !didRender {
@@ -315,22 +357,17 @@ extension ARViewController: CLLocationManagerDelegate {
                 playButton.isHidden = false
                 infoButtonView.isHidden = false
                 locationLabel.isHidden = false
+                surfaceLabel.isHidden = true
                 locationLabel.text = currentLocation
-                
             }
             
         default:
             if !errorShown {
                 errorShown = true
                 didRender = false
-                navigationItem.title = "Invalid location!"
                 playButton.isHidden = true
                 infoButtonView.isHidden = true
-                locationLabel.isHidden = true
-                locationLabel.text = nil
-                let alert = UIAlertController(title: "An error occured!", message: "This is not a valid location!", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
-                self.present(alert, animated: true)
+                locationLabel.text = "Location not supported yet!"
             }
             
         }

@@ -8,25 +8,25 @@
 
 import Foundation
 import AVFoundation
+
 public struct Audio {
+    
   var audioPlayer = AVAudioPlayer()
-  mutating func playAudio(name: String, type: String) -> Int
-  {
+    
+  mutating func playAudio(name: String, type: String) -> Bool {
      
     let sound = Bundle.main.path(forResource: name, ofType: type)
      
-    do
-    {
-      self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-      //audioPlayer.prepareToPlay()
-      self.audioPlayer.play()
+    do {
+        self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        self.audioPlayer.play()
     }
-    catch
-    {
-      print(error)
-      return -1
+    catch {
+        print(error)
+        return false
     }
      
-    return 0
+    return true;
+    
   }
 }

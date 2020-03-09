@@ -9,39 +9,45 @@
 /* Begin PBXBuildFile section */
 		6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1923DE7C79002320AB /* AppDelegate.swift */; };
 		6ACA3D1C23DE7C79002320AB /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1B23DE7C79002320AB /* ARViewController.swift */; };
-		6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1D23DE7C7A002320AB /* Experience.rcproject */; };
 		6ACA3D2123DE7C7A002320AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D1F23DE7C7A002320AB /* Main.storyboard */; };
 		6ACA3D2323DE7C84002320AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D2223DE7C84002320AB /* Assets.xcassets */; };
 		6ACA3D2623DE7C85002320AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACA3D2423DE7C85002320AB /* LaunchScreen.storyboard */; };
-		A4079A2A240CC110006E9D74 /* DancingBear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4079A29240CC110006E9D74 /* DancingBear.rcproject */; };
+		A4079A2C240CDE2F006E9D74 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4079A2B240CDE2F006E9D74 /* Audio.swift */; };
+		A4079A4624121389006E9D74 /* Dickson Court.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4079A4124121389006E9D74 /* Dickson Court.wav */; };
+		A4079A4724121389006E9D74 /* Covel Commons.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4079A4224121389006E9D74 /* Covel Commons.wav */; };
+		A4079A4824121389006E9D74 /* Wilson Plaza.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4079A4324121389006E9D74 /* Wilson Plaza.wav */; };
+		A4079A4924121389006E9D74 /* Court of Sciences.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4079A4424121389006E9D74 /* Court of Sciences.wav */; };
+		A4079A4A24121389006E9D74 /* Bruin Plaza.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4079A4524121389006E9D74 /* Bruin Plaza.wav */; };
+		A4079A4C24122334006E9D74 /* DancingBear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4079A4B24122334006E9D74 /* DancingBear.rcproject */; };
 		A412AB8A23FA3E650012F6CA /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412AB8923FA3E650012F6CA /* InfoPageViewController.swift */; };
 		A412AB8C23FA45670012F6CA /* LocationTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412AB8B23FA45670012F6CA /* LocationTextInfo.swift */; };
-		A4A7DA7F23EDE95800B1180F /* Bear1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4A7DA7E23EDE95800B1180F /* Bear1.rcproject */; };
-		A4A7DAA723F10DBC00B1180F /* CrazyBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4A7DAA623F10DBC00B1180F /* CrazyBox.rcproject */; };
+		A4A7DA7F23EDE95800B1180F /* CrazyBear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4A7DA7E23EDE95800B1180F /* CrazyBear.rcproject */; };
 		A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEA23E7D16D00676F82 /* LocationList.swift */; };
 		A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEB23E7D16D00676F82 /* Location.swift */; };
-		A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEE23E7D67700676F82 /* Bear.rcproject */; };
-		CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */; };
+		A4D8AAEF23E7D67700676F82 /* StillBear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEE23E7D67700676F82 /* StillBear.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Tour Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ACA3D1623DE7C79002320AB /* tour.AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tour.AR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACA3D1923DE7C79002320AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ACA3D1B23DE7C79002320AB /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		6ACA3D1D23DE7C7A002320AB /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		6ACA3D2023DE7C7A002320AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6ACA3D2223DE7C84002320AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ACA3D2523DE7C85002320AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ACA3D2723DE7C85002320AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4079A29240CC110006E9D74 /* DancingBear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = DancingBear.rcproject; sourceTree = "<group>"; };
+		A4079A2B240CDE2F006E9D74 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		A4079A4124121389006E9D74 /* Dickson Court.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Dickson Court.wav"; sourceTree = "<group>"; };
+		A4079A4224121389006E9D74 /* Covel Commons.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Covel Commons.wav"; sourceTree = "<group>"; };
+		A4079A4324121389006E9D74 /* Wilson Plaza.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wilson Plaza.wav"; sourceTree = "<group>"; };
+		A4079A4424121389006E9D74 /* Court of Sciences.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Court of Sciences.wav"; sourceTree = "<group>"; };
+		A4079A4524121389006E9D74 /* Bruin Plaza.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bruin Plaza.wav"; sourceTree = "<group>"; };
+		A4079A4B24122334006E9D74 /* DancingBear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = DancingBear.rcproject; sourceTree = "<group>"; };
 		A412AB8923FA3E650012F6CA /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
 		A412AB8B23FA45670012F6CA /* LocationTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTextInfo.swift; sourceTree = "<group>"; };
-		A4A7DA7E23EDE95800B1180F /* Bear1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bear1.rcproject; sourceTree = "<group>"; };
-		A4A7DAA623F10DBC00B1180F /* CrazyBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = CrazyBox.rcproject; sourceTree = "<group>"; };
+		A4A7DA7E23EDE95800B1180F /* CrazyBear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = CrazyBear.rcproject; sourceTree = "<group>"; };
 		A4D8AAEA23E7D16D00676F82 /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 		A4D8AAEB23E7D16D00676F82 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		A4D8AAEE23E7D67700676F82 /* Bear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bear.rcproject; sourceTree = "<group>"; };
-		CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A4D8AAEE23E7D67700676F82 /* StillBear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = StillBear.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,7 @@
 		6ACA3D1723DE7C79002320AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */,
+				6ACA3D1623DE7C79002320AB /* tour.AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,14 +84,16 @@
 				A49C5E2023EB3607006C4CF8 /* Model */,
 				A49C5E2123EB3610006C4CF8 /* View */,
 				A49C5E2223EB361A006C4CF8 /* Controller */,
-				6ACA3D1D23DE7C7A002320AB /* Experience.rcproject */,
-				A4D8AAEE23E7D67700676F82 /* Bear.rcproject */,
-				A4079A29240CC110006E9D74 /* DancingBear.rcproject */,
-				A4A7DA7E23EDE95800B1180F /* Bear1.rcproject */,
-				A4A7DAA623F10DBC00B1180F /* CrazyBox.rcproject */,
+				A4D8AAEE23E7D67700676F82 /* StillBear.rcproject */,
+				A4079A4B24122334006E9D74 /* DancingBear.rcproject */,
+				A4A7DA7E23EDE95800B1180F /* CrazyBear.rcproject */,
+				A4079A4524121389006E9D74 /* Bruin Plaza.wav */,
+				A4079A4424121389006E9D74 /* Court of Sciences.wav */,
+				A4079A4224121389006E9D74 /* Covel Commons.wav */,
+				A4079A4124121389006E9D74 /* Dickson Court.wav */,
+				A4079A4324121389006E9D74 /* Wilson Plaza.wav */,
 				6ACA3D2223DE7C84002320AB /* Assets.xcassets */,
 				6ACA3D2723DE7C85002320AB /* Info.plist */,
-				CC6A2AF623E7C6B9004736FE /* WelcomeViewController.swift */,
 			);
 			path = "AR Tour Guide";
 			sourceTree = "<group>";
@@ -93,6 +101,7 @@
 		A49C5E2023EB3607006C4CF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4079A2B240CDE2F006E9D74 /* Audio.swift */,
 				A4D8AAEB23E7D16D00676F82 /* Location.swift */,
 				A4D8AAEA23E7D16D00676F82 /* LocationList.swift */,
 				A412AB8B23FA45670012F6CA /* LocationTextInfo.swift */,
@@ -135,7 +144,7 @@
 			);
 			name = "AR Tour Guide";
 			productName = "AR Tour Guide";
-			productReference = 6ACA3D1623DE7C79002320AB /* AR Tour Guide.app */;
+			productReference = 6ACA3D1623DE7C79002320AB /* tour.AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,8 +185,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4079A4724121389006E9D74 /* Covel Commons.wav in Resources */,
+				A4079A4824121389006E9D74 /* Wilson Plaza.wav in Resources */,
+				A4079A4A24121389006E9D74 /* Bruin Plaza.wav in Resources */,
+				A4079A4624121389006E9D74 /* Dickson Court.wav in Resources */,
 				6ACA3D2623DE7C85002320AB /* LaunchScreen.storyboard in Resources */,
 				6ACA3D2323DE7C84002320AB /* Assets.xcassets in Resources */,
+				A4079A4924121389006E9D74 /* Court of Sciences.wav in Resources */,
 				6ACA3D2123DE7C7A002320AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,16 +205,14 @@
 			files = (
 				A412AB8C23FA45670012F6CA /* LocationTextInfo.swift in Sources */,
 				6ACA3D1C23DE7C79002320AB /* ARViewController.swift in Sources */,
-				CC6A2AF723E7C6B9004736FE /* WelcomeViewController.swift in Sources */,
 				6ACA3D1A23DE7C79002320AB /* AppDelegate.swift in Sources */,
 				A412AB8A23FA3E650012F6CA /* InfoPageViewController.swift in Sources */,
-				A4D8AAEF23E7D67700676F82 /* Bear.rcproject in Sources */,
+				A4D8AAEF23E7D67700676F82 /* StillBear.rcproject in Sources */,
 				A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */,
+				A4079A2C240CDE2F006E9D74 /* Audio.swift in Sources */,
+				A4079A4C24122334006E9D74 /* DancingBear.rcproject in Sources */,
 				A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */,
-				6ACA3D1E23DE7C7A002320AB /* Experience.rcproject in Sources */,
-				A4079A2A240CC110006E9D74 /* DancingBear.rcproject in Sources */,
-				A4A7DAA723F10DBC00B1180F /* CrazyBox.rcproject in Sources */,
-				A4A7DA7F23EDE95800B1180F /* Bear1.rcproject in Sources */,
+				A4A7DA7F23EDE95800B1180F /* CrazyBear.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +363,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = artourguide;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "tou-a-r";
+				PRODUCT_NAME = tour.AR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cl.AR-Tour-Guide1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = tour.AR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -113,7 +113,9 @@ class LocationTextInfo {
 
                         """,
         
-        "Sproul Hall": "I don't like classic triples."
+        "Sproul Hall": "I don't like classic triples.",
+        
+        "De Neve": "Adithya lives here!"
         
     ]
     
