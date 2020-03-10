@@ -22,7 +22,7 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: - Variables and Constants
     let locationManager = CLLocationManager()
-    var bearAnchor: DancingBear.Scene?
+    var bearAnchor: WavingBear.Scene?
     var locationList = LocationList()
     var audioPlayer = Audio()
     var errorShown = false
@@ -62,7 +62,7 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
         
         print("Bear button pressed.")
         
-        bearAnchor = try! DancingBear.loadScene()
+        bearAnchor = try! WavingBear.loadScene()
         
         if !arView.scene.anchors.isEmpty {
             arView.scene.anchors.removeAll()
@@ -145,8 +145,8 @@ class ARViewController: UIViewController, UIScrollViewDelegate {
                 latitude: 34.073248,
                 longitude: -118.450548),
             coord2: CLLocationCoordinate2D(
-                latitude: 34.072746,
-                longitude: -118.449628),
+                latitude: 34.072706,
+                longitude: -118.449424),
             name: "Covel Commons")
         
         let powellLibrary = Location(

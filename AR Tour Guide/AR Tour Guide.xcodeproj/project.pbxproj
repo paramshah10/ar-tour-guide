@@ -25,6 +25,7 @@
 		A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEA23E7D16D00676F82 /* LocationList.swift */; };
 		A4D8AAED23E7D16D00676F82 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEB23E7D16D00676F82 /* Location.swift */; };
 		A4D8AAEF23E7D67700676F82 /* StillBear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4D8AAEE23E7D67700676F82 /* StillBear.rcproject */; };
+		A4E03DFD241806A000DBF09D /* WavingBear.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A4E03DFC241806A000DBF09D /* WavingBear.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A4D8AAEA23E7D16D00676F82 /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 		A4D8AAEB23E7D16D00676F82 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A4D8AAEE23E7D67700676F82 /* StillBear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = StillBear.rcproject; sourceTree = "<group>"; };
+		A4E03DFC241806A000DBF09D /* WavingBear.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = WavingBear.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				A4D8AAEE23E7D67700676F82 /* StillBear.rcproject */,
 				A4079A4B24122334006E9D74 /* DancingBear.rcproject */,
 				A4A7DA7E23EDE95800B1180F /* CrazyBear.rcproject */,
+				A4E03DFC241806A000DBF09D /* WavingBear.rcproject */,
 				A4079A4524121389006E9D74 /* Bruin Plaza.wav */,
 				A4079A4424121389006E9D74 /* Court of Sciences.wav */,
 				A4079A4224121389006E9D74 /* Covel Commons.wav */,
@@ -212,6 +215,7 @@
 				A4079A2C240CDE2F006E9D74 /* Audio.swift in Sources */,
 				A4079A4C24122334006E9D74 /* DancingBear.rcproject in Sources */,
 				A4D8AAEC23E7D16D00676F82 /* LocationList.swift in Sources */,
+				A4E03DFD241806A000DBF09D /* WavingBear.rcproject in Sources */,
 				A4A7DA7F23EDE95800B1180F /* CrazyBear.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
