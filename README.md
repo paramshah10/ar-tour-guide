@@ -30,7 +30,7 @@ Github: *@svathsa*
 
 <img src="images/Adithya.jpg" width="250">
 
-Github: *@adithya-0800*
+Github: *@git-adithyanair*
 
 
 **Daniel Liu, Software Developer**
